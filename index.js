@@ -10,7 +10,7 @@ const distPath = path.join(DIST_DIR, 'team.html');
 
 const render = require('./src/page-template.js');
 
-const teamMembers = [];
+const teamMembers = [Engineer, Intern, Manager];
 
 
 // function for creating manager - inquirer questions
