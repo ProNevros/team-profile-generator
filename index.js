@@ -16,21 +16,15 @@ const teamMembers = [];
 
 // function for creating manager - inquirer questions
   // take those questions and create a new Manager with the user provided answers
-const roleQuestions = [{
-  name:'role',
-  type:'list',
-  message:'Which kind of employee are you adding?',
-  choices:[Manager, Engineer, Intern],
-},
-{
+const managerQuestions = [{
   name:'name',
   type:'input',
-  message:'What is their name?'
+  message:'What is your name?'
 },
 {
   name:'idNum',
   type:'input',
-  message:'What is their ID code?',
+  message:'What is your ID code?',
 },
 {
   name:'email',
@@ -39,7 +33,9 @@ const roleQuestions = [{
 },
 ]
   // push that new Manager to the team members array
-
+addMember(roleQuestions){
+  teamMembers.push()
+}
   // follow the same pattern for each type of employee
   // build a function for them that uses inquirer
 
