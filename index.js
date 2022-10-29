@@ -9,12 +9,35 @@ const DIST_DIR = path.resolve(__dirname, 'dist');
 const distPath = path.join(DIST_DIR, 'team.html');
 
 const render = require('./src/page-template.js');
+const { type } = require('os');
 
-const teamMembers = [Engineer, Intern, Manager];
+const teamMembers = [];
 
 
 // function for creating manager - inquirer questions
   // take those questions and create a new Manager with the user provided answers
+const roleQuestions = [{
+  name:'role',
+  type:'list',
+  message:'Which kind of employee are you adding?',
+  choices:[Manager, Engineer, Intern],
+},
+{
+  name:'name',
+  type:'input',
+  message:'What is their name?'
+},
+{
+  name:'idNum',
+  type:'input',
+  message:'What is their ID code?',
+},
+{
+  name:'email',
+  type:'input',
+  message:'What is their email?'
+},
+]
   // push that new Manager to the team members array
 
   // follow the same pattern for each type of employee
